@@ -1,6 +1,6 @@
 services:
   - type: static
-    name: myapp-frontend
+    name: fullstack-ci-cd-1
     region: oregon
     rootDir: frontend
     buildCommand: npm install && npm run build
