@@ -15,30 +15,30 @@ jobs:
 
       # Test Backend
       - name: Setup Node.js for Backend
-        working-directory: ./backend
         uses: actions/setup-node@v4
         with:
           node-version: 18
+        working-directory: ./backend
 
       - name: Install Backend Dependencies
-        working-directory: ./backend
         run: npm ci
-
-      - name: Run Backend Tests (dummy)
         working-directory: ./backend
+
+      - name: Run Backend Tests
         run: npm test
+        working-directory: ./backend
 
       # Test & Build Frontend
       - name: Setup Node.js for Frontend
-        working-directory: ./frontend
         uses: actions/setup-node@v4
         with:
           node-version: 18
+        working-directory: ./frontend
 
       - name: Install Frontend Dependencies
-        working-directory: ./frontend
         run: npm ci
+        working-directory: ./frontend
 
       - name: Build Frontend
-        working-directory: ./frontend
         run: npm run build
+        working-directory: ./frontend
