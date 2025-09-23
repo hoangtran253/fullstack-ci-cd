@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: myapp-frontend
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    publishPath: dist
