@@ -1,7 +1,21 @@
 services:
+  # Frontend: React + Vite
   - type: static
     name: fullstack-ci-cd-1
     region: oregon
     rootDir: frontend
     buildCommand: npm install && npm run build
     publishPath: dist
+
+  # Backend: Node.js + Docker
+  - type: web
+    name: fullstack-ci-cd
+    env: docker
+    region: oregon
+    rootDir: backend
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: "3000"
+      - key: NODE_ENV
+        value: production
