@@ -4,13 +4,13 @@ function App() {
   const [backendMessage, setBackendMessage] = useState('Click button to load...')
 
   const fetchData = async () => {
-    try {
-      const res = await fetch('https://fullstack-ci-cd.onrender.com/api/hello')
-      const data = await res.json()
-      setBackendMessage(data.message)
-    } catch (err) {
-      setBackendMessage('❌ Failed to fetch from backend!')
-    }
+  try {
+    const res = await fetch('https://fullstack-ci-cd.onrender.com/api/hello');
+    const data = await res.json();
+    setBackendMessage(data.message);
+  } catch (err) {
+    setBackendMessage('❌ Failed to fetch from backend!');
+  }
   }
 
   return (
