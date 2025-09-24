@@ -5,7 +5,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch('/api/hello')
+      const res = await fetch('https://fullstack-ci-cd.onrender.com//api/hello')
       const data = await res.json()
       setBackendMessage(data.message)
     } catch (err) {
